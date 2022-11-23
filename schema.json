@@ -1,0 +1,1002 @@
+{
+  "__schema": {
+    "queryType": { "name": "Query" },
+    "mutationType": { "name": "Mutation" },
+    "subscriptionType": null,
+    "types": [
+      {
+        "kind": "OBJECT",
+        "name": "Query",
+        "fields": [
+          {
+            "name": "_",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "albums",
+            "type": { "kind": "OBJECT", "name": "AlbumsPage", "ofType": null },
+            "args": [
+              { "name": "options", "type": { "kind": "SCALAR", "name": "Any" } }
+            ]
+          },
+          {
+            "name": "album",
+            "type": { "kind": "OBJECT", "name": "Album", "ofType": null },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "comments",
+            "type": {
+              "kind": "OBJECT",
+              "name": "CommentsPage",
+              "ofType": null
+            },
+            "args": [
+              { "name": "options", "type": { "kind": "SCALAR", "name": "Any" } }
+            ]
+          },
+          {
+            "name": "comment",
+            "type": { "kind": "OBJECT", "name": "Comment", "ofType": null },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "photos",
+            "type": { "kind": "OBJECT", "name": "PhotosPage", "ofType": null },
+            "args": [
+              { "name": "options", "type": { "kind": "SCALAR", "name": "Any" } }
+            ]
+          },
+          {
+            "name": "photo",
+            "type": { "kind": "OBJECT", "name": "Photo", "ofType": null },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "posts",
+            "type": { "kind": "OBJECT", "name": "PostsPage", "ofType": null },
+            "args": [
+              { "name": "options", "type": { "kind": "SCALAR", "name": "Any" } }
+            ]
+          },
+          {
+            "name": "post",
+            "type": { "kind": "OBJECT", "name": "Post", "ofType": null },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "todos",
+            "type": { "kind": "OBJECT", "name": "TodosPage", "ofType": null },
+            "args": [
+              { "name": "options", "type": { "kind": "SCALAR", "name": "Any" } }
+            ]
+          },
+          {
+            "name": "todo",
+            "type": { "kind": "OBJECT", "name": "Todo", "ofType": null },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "users",
+            "type": { "kind": "OBJECT", "name": "UsersPage", "ofType": null },
+            "args": [
+              { "name": "options", "type": { "kind": "SCALAR", "name": "Any" } }
+            ]
+          },
+          {
+            "name": "user",
+            "type": { "kind": "OBJECT", "name": "User", "ofType": null },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "AlbumsPage",
+        "fields": [
+          {
+            "name": "data",
+            "type": {
+              "kind": "LIST",
+              "ofType": { "kind": "OBJECT", "name": "Album", "ofType": null }
+            },
+            "args": []
+          },
+          {
+            "name": "links",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PaginationLinks",
+              "ofType": null
+            },
+            "args": []
+          },
+          {
+            "name": "meta",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PageMetadata",
+              "ofType": null
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Album",
+        "fields": [
+          {
+            "name": "id",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "title",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "user",
+            "type": { "kind": "OBJECT", "name": "User", "ofType": null },
+            "args": []
+          },
+          {
+            "name": "photos",
+            "type": { "kind": "OBJECT", "name": "PhotosPage", "ofType": null },
+            "args": [
+              { "name": "options", "type": { "kind": "SCALAR", "name": "Any" } }
+            ]
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "User",
+        "fields": [
+          {
+            "name": "id",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "name",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "username",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "email",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "address",
+            "type": { "kind": "OBJECT", "name": "Address", "ofType": null },
+            "args": []
+          },
+          {
+            "name": "phone",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "website",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "company",
+            "type": { "kind": "OBJECT", "name": "Company", "ofType": null },
+            "args": []
+          },
+          {
+            "name": "posts",
+            "type": { "kind": "OBJECT", "name": "PostsPage", "ofType": null },
+            "args": [
+              { "name": "options", "type": { "kind": "SCALAR", "name": "Any" } }
+            ]
+          },
+          {
+            "name": "albums",
+            "type": { "kind": "OBJECT", "name": "AlbumsPage", "ofType": null },
+            "args": [
+              { "name": "options", "type": { "kind": "SCALAR", "name": "Any" } }
+            ]
+          },
+          {
+            "name": "todos",
+            "type": { "kind": "OBJECT", "name": "TodosPage", "ofType": null },
+            "args": [
+              { "name": "options", "type": { "kind": "SCALAR", "name": "Any" } }
+            ]
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Address",
+        "fields": [
+          {
+            "name": "street",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "suite",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "city",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "zipcode",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "geo",
+            "type": { "kind": "OBJECT", "name": "Geo", "ofType": null },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Geo",
+        "fields": [
+          {
+            "name": "lat",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "lng",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Company",
+        "fields": [
+          {
+            "name": "name",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "catchPhrase",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "bs",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PostsPage",
+        "fields": [
+          {
+            "name": "data",
+            "type": {
+              "kind": "LIST",
+              "ofType": { "kind": "OBJECT", "name": "Post", "ofType": null }
+            },
+            "args": []
+          },
+          {
+            "name": "links",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PaginationLinks",
+              "ofType": null
+            },
+            "args": []
+          },
+          {
+            "name": "meta",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PageMetadata",
+              "ofType": null
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Post",
+        "fields": [
+          {
+            "name": "id",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "title",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "body",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "user",
+            "type": { "kind": "OBJECT", "name": "User", "ofType": null },
+            "args": []
+          },
+          {
+            "name": "comments",
+            "type": {
+              "kind": "OBJECT",
+              "name": "CommentsPage",
+              "ofType": null
+            },
+            "args": [
+              { "name": "options", "type": { "kind": "SCALAR", "name": "Any" } }
+            ]
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "CommentsPage",
+        "fields": [
+          {
+            "name": "data",
+            "type": {
+              "kind": "LIST",
+              "ofType": { "kind": "OBJECT", "name": "Comment", "ofType": null }
+            },
+            "args": []
+          },
+          {
+            "name": "links",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PaginationLinks",
+              "ofType": null
+            },
+            "args": []
+          },
+          {
+            "name": "meta",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PageMetadata",
+              "ofType": null
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Comment",
+        "fields": [
+          {
+            "name": "id",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "name",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "email",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "body",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "post",
+            "type": { "kind": "OBJECT", "name": "Post", "ofType": null },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PaginationLinks",
+        "fields": [
+          {
+            "name": "first",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PageLimitPair",
+              "ofType": null
+            },
+            "args": []
+          },
+          {
+            "name": "prev",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PageLimitPair",
+              "ofType": null
+            },
+            "args": []
+          },
+          {
+            "name": "next",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PageLimitPair",
+              "ofType": null
+            },
+            "args": []
+          },
+          {
+            "name": "last",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PageLimitPair",
+              "ofType": null
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PageLimitPair",
+        "fields": [
+          {
+            "name": "page",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "limit",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PageMetadata",
+        "fields": [
+          {
+            "name": "totalCount",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "TodosPage",
+        "fields": [
+          {
+            "name": "data",
+            "type": {
+              "kind": "LIST",
+              "ofType": { "kind": "OBJECT", "name": "Todo", "ofType": null }
+            },
+            "args": []
+          },
+          {
+            "name": "links",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PaginationLinks",
+              "ofType": null
+            },
+            "args": []
+          },
+          {
+            "name": "meta",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PageMetadata",
+              "ofType": null
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Todo",
+        "fields": [
+          {
+            "name": "id",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "title",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "completed",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "user",
+            "type": { "kind": "OBJECT", "name": "User", "ofType": null },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PhotosPage",
+        "fields": [
+          {
+            "name": "data",
+            "type": {
+              "kind": "LIST",
+              "ofType": { "kind": "OBJECT", "name": "Photo", "ofType": null }
+            },
+            "args": []
+          },
+          {
+            "name": "links",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PaginationLinks",
+              "ofType": null
+            },
+            "args": []
+          },
+          {
+            "name": "meta",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PageMetadata",
+              "ofType": null
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Photo",
+        "fields": [
+          {
+            "name": "id",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "title",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "url",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "thumbnailUrl",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "album",
+            "type": { "kind": "OBJECT", "name": "Album", "ofType": null },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "UsersPage",
+        "fields": [
+          {
+            "name": "data",
+            "type": {
+              "kind": "LIST",
+              "ofType": { "kind": "OBJECT", "name": "User", "ofType": null }
+            },
+            "args": []
+          },
+          {
+            "name": "links",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PaginationLinks",
+              "ofType": null
+            },
+            "args": []
+          },
+          {
+            "name": "meta",
+            "type": {
+              "kind": "OBJECT",
+              "name": "PageMetadata",
+              "ofType": null
+            },
+            "args": []
+          }
+        ],
+        "interfaces": []
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Mutation",
+        "fields": [
+          {
+            "name": "_",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": []
+          },
+          {
+            "name": "createAlbum",
+            "type": { "kind": "OBJECT", "name": "Album", "ofType": null },
+            "args": [
+              {
+                "name": "input",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateAlbum",
+            "type": { "kind": "OBJECT", "name": "Album", "ofType": null },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              },
+              {
+                "name": "input",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "deleteAlbum",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "createComment",
+            "type": { "kind": "OBJECT", "name": "Comment", "ofType": null },
+            "args": [
+              {
+                "name": "input",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateComment",
+            "type": { "kind": "OBJECT", "name": "Comment", "ofType": null },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              },
+              {
+                "name": "input",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "deleteComment",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "createPhoto",
+            "type": { "kind": "OBJECT", "name": "Photo", "ofType": null },
+            "args": [
+              {
+                "name": "input",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "updatePhoto",
+            "type": { "kind": "OBJECT", "name": "Photo", "ofType": null },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              },
+              {
+                "name": "input",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "deletePhoto",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "createPost",
+            "type": { "kind": "OBJECT", "name": "Post", "ofType": null },
+            "args": [
+              {
+                "name": "input",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "updatePost",
+            "type": { "kind": "OBJECT", "name": "Post", "ofType": null },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              },
+              {
+                "name": "input",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "deletePost",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "createTodo",
+            "type": { "kind": "OBJECT", "name": "Todo", "ofType": null },
+            "args": [
+              {
+                "name": "input",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateTodo",
+            "type": { "kind": "OBJECT", "name": "Todo", "ofType": null },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              },
+              {
+                "name": "input",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "deleteTodo",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "createUser",
+            "type": { "kind": "OBJECT", "name": "User", "ofType": null },
+            "args": [
+              {
+                "name": "input",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateUser",
+            "type": { "kind": "OBJECT", "name": "User", "ofType": null },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              },
+              {
+                "name": "input",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          },
+          {
+            "name": "deleteUser",
+            "type": { "kind": "SCALAR", "name": "Any" },
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": { "kind": "SCALAR", "name": "Any" }
+                }
+              }
+            ]
+          }
+        ],
+        "interfaces": []
+      },
+      { "kind": "SCALAR", "name": "Any" }
+    ],
+    "directives": []
+  }
+}
